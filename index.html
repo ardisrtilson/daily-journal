@@ -4,33 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
-
-    <header>
-
-    </header>
-
-    <main>
-
-    </main>
-
-    <footer>
-
-    </footer>
-
-    <section>
-
-    </section>
-
-    <article>
-
-    </article>
-
-    <form>
-
-    </form>
-    
+    <h2>Daily Journal</h2>
+        <form action="">
+        <fieldset>
+        <label for="journalDate">Date of entry</label>
+        <input type="date" name="journalDate" id="journalDate">
+        </fieldset>
+        <fieldset>
+            <label for="conceptsCovered">Concepts Covered</label>
+            <input type="text" name="conceptsCovered" id="conceptsCovered">
+            </fieldset>
+        <fieldset>
+                <label for="journalEntry">Journal Entry</label>
+                <textarea name="journalEntry" id="journalEntry">
+        </textarea>
+        </fieldset>
+        <fieldset>
+                    <label for="Mood">Mood</label>
+                    <select name="mood" id="mood">
+                    <option value="Happy">Happy</option>
+                    <option value="Sad">Sad</option>
+                    <option value="Afraid">Afraid</option>
+                    <option value="Mad">Mad</option>
+                    </select>
+        </fieldset>
+            <button type="button" name="conceptsCovered" id="conceptsCovered">
+                Record Journal Entry
+            </button>
+        </form>
 </body>
 </html>
