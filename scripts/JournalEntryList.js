@@ -8,7 +8,7 @@ const EntryListComponent = (entryArray) => {
     let journalHTML = ""
 
     for (const currentEntry of entryArray) {
-        journalHTML += JournalEntryComponent(currentEntry)
+        journalHTML = JournalEntryComponent(currentEntry)
     }
 
     entryLog.innerHTML +=

@@ -1,34 +1,38 @@
+import {saveJournalEntry} from "./JournalDataProvider.js"
+import { journalList } from "./JournalEntryList.js"
+
 const journalForm = document.querySelector(".journalForm")
+const eventHub = document.querySelector(".container")
 
+eventHub.addEventListener("click", clickEvent => {
+    if(clickEvent.target.id === "conceptsCovered") {
+        const journalEntry = document.querySelector("#journal--entry")
+        const journalConcept = document.querySelector("#journal--concept")
+        const journalMood = document.querySelector("#journal--mood")
+    
+        const newNote = {
+            entry: journalEntry.value,
+            concept: journalConcept.value,
+            mood: journalMood.value,
+            date: Date.now()
+        }
 
-export const JournalFormComponent = () => {
+        saveJournalEntry(newNote)
+        journalList()
+    }
+})
 
-journalForm.innerHTML +=`
-<form action="">
-<fieldset>
-<label class="title" for="journalDate">Date of entry</label>
-<input type="date" name="journalDate" id="journalDate">
-</fieldset>
-<fieldset>
-    <label class="title" for="conceptsCovered">Concepts Covered</label>
-    <input type="text" name="conceptsCovered" id="conceptsCovered">
-    </fieldset>
-<fieldset>
-        <label class="title" for="journalEntry">Journal Entry</label>
-        <textarea name="journalEntry" id="journalEntry">
-</textarea>
-</fieldset>
-<fieldset>
-            <label class="title" for="Mood">Mood</label>
-            <select name="mood" id="mood">
-            <option value="Happy">Happy</option>
-            <option value="Sad">Sad</option>
-            <option value="Afraid">Afraid</option>
-            <option value="Mad">Mad</option>
-            </select>
-</fieldset>
-    <button type="button" name="conceptsCovered" id="conceptsCovered">
+export const JournalFormComponent  = () => {
+    journalForm.innerHTML +=`
+        <input type="text" id="journal--concept" placeholder="Concept" />
+        <textarea id="journal--entry" placeholder ="Entry"></textarea>
+        <select name="mood" id="journal--mood">
+        <option value="Happy">Happy</option>
+        <option value="Sad">Sad</option>
+        <option value="Afraid">Afraid</option>
+        <option value="Mad">Mad</option>
+        </select>
+        <button type="button" name="conceptsCovered" id="conceptsCovered">
         Record Journal Entry
-    </button>
-</form>`
+    </button>`
 }
