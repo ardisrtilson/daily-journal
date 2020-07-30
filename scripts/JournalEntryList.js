@@ -1,4 +1,4 @@
-import { useJournalEntries } from "./JournalDataProvider.js"
+import { useJournalEntries, getEntries } from "./JournalDataProvider.js"
 import { JournalEntryComponent } from "./JournalEntry.js"
 
 const entryLog = document.querySelector("#entryLog")
@@ -11,15 +11,15 @@ const EntryListComponent = (entryArray) => {
         journalHTML += JournalEntryComponent(currentEntry)
     }
 
-        entryLog.innerHTML += 
+    entryLog.innerHTML +=
         `<article class="journalEntry">
             ${journalHTML}
         </article>`
-    }
+}
 
-    export const journalList = () => {
-        
+export const journalList = () => {
+    getEntries().then(() => {
         const entries = useJournalEntries()
         EntryListComponent(entries)
-    
-    }
+    })
+}
