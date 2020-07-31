@@ -6,10 +6,35 @@ const eventHub = document.querySelector(".container")
 
 eventHub.addEventListener("click", clickEvent => {
     if(clickEvent.target.id === "conceptsCovered") {
+
         const journalEntry = document.querySelector("#journal--entry")
         const journalConcept = document.querySelector("#journal--concept")
         const journalMood = document.querySelector("#journal--mood")
-    
+
+    if (journalConcept.value.length >= 10){
+        window.alert("Concept Must Be Less Than 10 Characters")
+
+    } else{
+
+        const swearArray = ["shit", "piss", "fuck", "cunt", "cock", "dick"]
+        var conceptSwear = []
+        var entrySwear = []
+
+        for (const swears of swearArray){
+            conceptSwear.push(journalConcept.value.search(swears))
+            entrySwear.push(journalEntry.value.search(swears))
+        }
+
+        const conceptCheck = conceptSwear.includes(0)
+        const entryCheck = entrySwear.includes(0)
+        console.log(conceptCheck)
+
+            
+            if (conceptCheck === true || entryCheck === true){
+                window.alert("Plz Don't Swear")
+
+            } else{
+
         const newNote = {
             entry: journalEntry.value,
             concept: journalConcept.value,
@@ -19,6 +44,8 @@ eventHub.addEventListener("click", clickEvent => {
 
         saveJournalEntry(newNote)
         journalList()
+    }
+    }
     }
 })
 
