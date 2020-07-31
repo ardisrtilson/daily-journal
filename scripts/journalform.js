@@ -44,13 +44,14 @@ eventHub.addEventListener("click", clickEvent => {
 
         saveJournalEntry(newNote)
         journalList()
+        JournalFormComponent()
     }
     }
     }
 })
 
 export const JournalFormComponent  = () => {
-    journalForm.innerHTML +=`
+    journalForm.innerHTML =`
         <input type="text" id="journal--concept" placeholder="Concept" />
         <textarea id="journal--entry" placeholder ="Entry"></textarea>
         <select name="mood" id="journal--mood">
