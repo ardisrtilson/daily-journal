@@ -27,7 +27,7 @@ export const useJournalEntries = () => {
 }
 
 export const getEntries = () => {
-return fetch("http://localhost:3000/journal")
+return fetch("http://localhost:3000/journal?_expand=mood")
     .then(response => response.json()) 
     .then(retrievedEntries => {
        journal = retrievedEntries

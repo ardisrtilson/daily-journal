@@ -1,172 +1,57 @@
 {
   "journal": [
     {
-      "entry": "Yeehaw",
-      "concept": "Weewoo",
-      "mood": "Happy",
-      "date": 1596142590065,
+      "entry": "asf",
+      "concept": "asdf",
+      "moodId": "Afraid",
+      "instructorId": "Greg",
+      "date": 1597441775655,
       "id": 1
     },
     {
-      "entry": "",
-      "concept": "",
-      "mood": "Happy",
-      "date": 1596219123919,
+      "entry": "asdf",
+      "concept": "asdf",
+      "moodId": "Sad",
+      "instructorId": "Greg",
+      "date": 1597441812743,
       "id": 2
     },
     {
-      "entry": "",
-      "concept": "",
-      "mood": "Happy",
-      "date": 1596219127738,
+      "entry": "asdf",
+      "concept": "fasdf",
+      "moodId": "Happy",
+      "instructorId": "Greg",
+      "date": 1597441857696,
       "id": 3
+    }
+  ],
+  "moods": [
+    {
+      "id": 1,
+      "label": "Happy"
     },
     {
-      "entry": "",
-      "concept": "",
-      "mood": "Happy",
-      "date": 1596219128619,
-      "id": 4
+      "id": 2,
+      "label": "Sad"
     },
     {
-      "entry": "Yeeyee",
-      "concept": "Eyy",
-      "mood": "Happy",
-      "date": 1596219466510,
-      "id": 5
+      "id": 3,
+      "label": "Afraid"
     },
     {
-      "entry": "",
-      "concept": "Fucku",
-      "mood": "Happy",
-      "date": 1596219948462,
-      "id": 6
+      "id": 4,
+      "label": "Mad"
     },
     {
-      "entry": "",
-      "concept": "No",
-      "mood": "Happy",
-      "date": 1596220138104,
-      "id": 7
-    },
+      "id": 5,
+      "label": "Wow"
+    }
+  ],
+  "instructors": [
     {
-      "entry": "sdfafuck",
-      "concept": "No",
-      "mood": "Happy",
-      "date": 1596220144602,
-      "id": 8
-    },
-    {
-      "entry": "fuck",
-      "concept": "No",
-      "mood": "Happy",
-      "date": 1596220151423,
-      "id": 9
-    },
-    {
-      "entry": "fuck",
-      "concept": "No",
-      "mood": "Happy",
-      "date": 1596220157609,
-      "id": 10
-    },
-    {
-      "entry": "",
-      "concept": "no",
-      "mood": "Happy",
-      "date": 1596221958163,
-      "id": 11
-    },
-    {
-      "entry": "",
-      "concept": "",
-      "mood": "Happy",
-      "date": 1596222095632,
-      "id": 12
-    },
-    {
-      "entry": "",
-      "concept": "asfuck",
-      "mood": "Happy",
-      "date": 1596222104140,
-      "id": 13
-    },
-    {
-      "entry": "",
-      "concept": "trefuck",
-      "mood": "Happy",
-      "date": 1596222158937,
-      "id": 14
-    },
-    {
-      "entry": "refuck",
-      "concept": "",
-      "mood": "Happy",
-      "date": 1596222173543,
-      "id": 15
-    },
-    {
-      "entry": "",
-      "concept": "sfsa",
-      "mood": "Happy",
-      "date": 1596222275663,
-      "id": 16
-    },
-    {
-      "entry": "asdfuck",
-      "concept": "",
-      "mood": "Happy",
-      "date": 1596222309030,
-      "id": 17
-    },
-    {
-      "entry": "",
-      "concept": "cunt",
-      "mood": "Happy",
-      "date": 1596222342154,
-      "id": 18
-    },
-    {
-      "entry": "",
-      "concept": "cunt",
-      "mood": "Happy",
-      "date": 1596222414166,
-      "id": 19
-    },
-    {
-      "entry": "",
-      "concept": "cunt",
-      "mood": "Happy",
-      "date": 1596222415183,
-      "id": 20
-    },
-    {
-      "entry": "dfa",
-      "concept": "h9",
-      "mood": "Happy",
-      "date": 1596222544434,
-      "id": 21
-    },
-    {
-      "entry": "afsdf",
-      "concept": "fasf",
-      "mood": "Happy",
-      "date": 1596222607728,
-      "id": 22
-    },
-    {
-      "entry": "",
-      "concept": "",
-      "mood": "Happy",
-      "date": 1596222622498,
-      "id": 23
-    },
-    {
-      "entry": "afsd",
-      "concept": "fasd",
-      "mood": "Happy",
-      "date": 1596222625200,
-      "id": 24
+      "id": 1,
+      "first_name": "Greg",
+      "last_name": "Korte"
     }
   ]
 }

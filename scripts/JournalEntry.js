@@ -5,7 +5,8 @@ export const JournalEntryComponent = (entry) => {
         ${entry.concept} <br>
         ${entry.entry} <br>
         ${new Date(entry.date).toLocaleDateString('en-US') } <br>
-        ${entry.mood} <br>
+        ${entry.moodId} <br>
+        ${entry.instructorId} <br>
         </fieldset>
         </section>
     `
