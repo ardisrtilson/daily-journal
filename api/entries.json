@@ -1,57 +1,43 @@
 {
-  "journal": [
-    {
-      "entry": "asf",
-      "concept": "asdf",
-      "moodId": "Afraid",
-      "instructorId": "Greg",
-      "date": 1597441775655,
-      "id": 1
-    },
-    {
-      "entry": "asdf",
-      "concept": "asdf",
-      "moodId": "Sad",
-      "instructorId": "Greg",
-      "date": 1597441812743,
-      "id": 2
-    },
-    {
-      "entry": "asdf",
-      "concept": "fasdf",
-      "moodId": "Happy",
-      "instructorId": "Greg",
-      "date": 1597441857696,
-      "id": 3
-    }
-  ],
   "moods": [
     {
       "id": 1,
-      "label": "Happy"
+      "label": "Dude"
     },
     {
       "id": 2,
-      "label": "Sad"
+      "label": "OK"
     },
     {
       "id": 3,
-      "label": "Afraid"
-    },
-    {
-      "id": 4,
-      "label": "Mad"
-    },
-    {
-      "id": 5,
-      "label": "Wow"
+      "label": "Oki Doki"
     }
   ],
   "instructors": [
     {
       "id": 1,
-      "first_name": "Greg",
+      "first_name": "Kristen",
       "last_name": "Korte"
+    },
+    {
+      "id": 2,
+      "first_name": "Steve",
+      "last_name": "Biggs"
+    },
+    {
+      "id": 3,
+      "first_name": "Spencer",
+      "last_name": "Robot"
+    }
+  ],
+  "journals": [
+    {
+      "entry": "",
+      "concept": "",
+      "moodId": "3",
+      "instructorId": "2",
+      "date": 1597703618879,
+      "id": 13
     }
   ]
 }

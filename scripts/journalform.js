@@ -8,12 +8,11 @@ const eventHub = document.querySelector(".container")
 
 eventHub.addEventListener("click", clickEvent => {
     if(clickEvent.target.id === "conceptsCovered") {
-
         const journalEntry = document.querySelector("#journal--entry")
         const journalConcept = document.querySelector("#journal--concept")
         const journalMood = document.querySelector("#journal--mood")
         const journalInstructor = document.querySelector("#journal--instructor")
-
+    if (journalMood.value != 0 && journalInstructor.value != 0) {
     if (journalConcept.value.length >= 10){
         window.alert("Concept Must Be Less Than 10 Characters")
 
@@ -35,9 +34,9 @@ eventHub.addEventListener("click", clickEvent => {
             if (conceptCheck === true || entryCheck === true){
                 window.alert("Plz Don't Swear")
 
-            } else{
-
+            } else{ 
         const newNote = {
+            
             entry: journalEntry.value,
             concept: journalConcept.value,
             moodId: journalMood.value,
@@ -48,8 +47,10 @@ eventHub.addEventListener("click", clickEvent => {
         journalList()
         JournalFormComponent()
     }
-    }
-    }
+    }}
+    else {window.alert("Plz Select a Mood")}
+}
+
 })
 
 export const JournalFormComponent  = () => {
@@ -65,7 +66,7 @@ export const JournalFormComponent  = () => {
         ${
             allMoods.map(
                 (mood) => {
-                    return `<option id="${ mood.id }">${ mood.label }</option>`
+                    return `<option value="${ mood.id }">${ mood.label }</option>`
                 }
             ).join("")
         }
@@ -75,7 +76,7 @@ export const JournalFormComponent  = () => {
         ${
             allInstuctors.map(
                 (instructor) => {
-                    return `<option id="${ instructor.id }">${ instructor.first_name }</option>`
+                    return `<option value="${ instructor.id }">${ instructor.first_name }</option>`
                 }
             ).join("")
         }
