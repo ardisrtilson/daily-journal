@@ -2,6 +2,7 @@ export const JournalEntryComponent = (entry) => {
     return `
         <section id="${entry.id}" class="journalEntry">
         <fieldset>
+        <section class="editCard--${entry.id}">
         ${entry.concept} <br>
         ${entry.entry} <br>
         ${new Date(entry.date).toLocaleDateString('en-US') } <br>
@@ -9,6 +10,7 @@ export const JournalEntryComponent = (entry) => {
         ${entry.instructor.first_name} <br>
         <button id="deleteEntry--${entry.id}">Delete</button>
         <button id="editEntry--${entry.id}">Edit</button>
+        </section>
         </fieldset>
         </section>
     `

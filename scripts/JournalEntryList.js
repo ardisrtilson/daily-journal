@@ -6,6 +6,10 @@ import { getInstructors } from "./InstructorProvider.js"
 const entryLog = document.querySelector(".entryLog")
 const eventHub = document.querySelector(".container")
 
+eventHub.addEventListener("entryStateChanged", customEvent => {
+    journalList()
+})
+
 let allEntriesConvertedToStrings = []
 eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id.startsWith("deleteEntry--")) {
@@ -24,7 +28,6 @@ export const journalList = () => {
     getMoods().then(() => {
     getInstructors().then(() => {
         const entries = useJournalEntries()
-        console.log(entries)
     // allMoods.find(mood => mood.id === parseInt(entry.moodId)).label
     // allInstructors.find(instructor => instructor.id === parseInt(entry.instructorId)).first_name
         render(entries)

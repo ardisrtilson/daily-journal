@@ -2,7 +2,7 @@ let journal = []
 const eventHub = document.querySelector(".container")
 
 const dispatchStateChangeEvent = () => {
-    eventHub.dispatchEvent(new CustomEvent("journalStateChanged"))
+    eventHub.dispatchEvent(new CustomEvent("entryStateChanged"))
 }
 
 export const saveJournalEntry = (newJournalEntry) => {
@@ -41,4 +41,15 @@ export const deleteEntry = entryId => {
     .then(response => response.json())
         .then(getEntries)
         .then(dispatchStateChangeEvent) 
+}
+
+export const editEntry = (edit) => {
+    return fetch(`http://localhost:3000/journals/${edit.id}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(edit)
+    }).then(getEntries)
+    .then(dispatchStateChangeEvent)
 }
