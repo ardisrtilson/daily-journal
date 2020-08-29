@@ -14,7 +14,7 @@ fetch("http://localhost:3000/journals", {
     },
     body: JSON.stringify(newJournalEntry)
 })
-    .then(getEntries)  
+    .then(getEntries)
     .then(dispatchStateChangeEvent)
 }
 
@@ -27,7 +27,7 @@ export const useJournalEntries = () => {
 }
 
 export const getEntries = () => {
-return fetch("http://localhost:3000/journals?_expand=mood")
+return fetch("http://localhost:3000/journals?_expand=mood&_expand=instructor")
     .then(response => response.json()) 
     .then(retrievedEntries => {
        journal = retrievedEntries
