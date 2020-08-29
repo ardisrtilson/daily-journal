@@ -57,7 +57,7 @@ export const JournalFormComponent  = () => {
     getMoods().then(() => {
         const allMoods = useMoods()
     getInstructors().then(() => {
-        const allInstuctors = useInstructors()
+        const allInstructors = useInstructors()
     journalForm.innerHTML =`
         <input type="text" id="journal--concept" placeholder="Concept" />
         <textarea id="journal--entry" placeholder ="Entry"></textarea>
@@ -74,7 +74,7 @@ export const JournalFormComponent  = () => {
         <select name="Instructor" id="journal--instructor">
         <option value="0">Please select an instructor...</option>
         ${
-            allInstuctors.map(
+            allInstructors.map(
                 (instructor) => {
                     return `<option value="${ instructor.id }">${ instructor.first_name }</option>`
                 }

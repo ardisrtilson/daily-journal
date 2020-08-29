@@ -32,12 +32,20 @@
   ],
   "journals": [
     {
-      "entry": "",
-      "concept": "",
+      "id": 1,
+      "entry": "fasdf",
+      "concept": "asdf",
+      "moodId": "2",
+      "instructorId": "3",
+      "date": 1598739517160
+    },
+    {
+      "id": 2,
+      "entry": "rrr",
+      "concept": "rrrr",
       "moodId": "3",
-      "instructorId": "2",
-      "date": 1597703618879,
-      "id": 13
+      "instructorId": "1",
+      "date": 1598739449202
     }
   ]
 }
