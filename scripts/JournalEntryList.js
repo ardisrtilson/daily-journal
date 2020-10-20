@@ -28,8 +28,6 @@ export const journalList = () => {
     getMoods().then(() => {
     getInstructors().then(() => {
         const entries = useJournalEntries()
-    // allMoods.find(mood => mood.id === parseInt(entry.moodId)).label
-    // allInstructors.find(instructor => instructor.id === parseInt(entry.instructorId)).first_name
         render(entries)
     })
 })

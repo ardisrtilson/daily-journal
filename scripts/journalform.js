@@ -12,6 +12,10 @@ eventHub.addEventListener("click", clickEvent => {
         const journalConcept = document.querySelector("#journal--concept")
         const journalMood = document.querySelector("#journal--mood")
         const journalInstructor = document.querySelector("#journal--instructor")
+        const journalTags = document.querySelector("#journal--tags")
+        const tagString = String(journalTags.value)
+        const [tag1, tag2, tag3] = tagString.split(",")
+
     if (journalMood.value != 0 && journalInstructor.value != 0) {
     if (journalConcept.value.length >= 10){
         window.alert("Concept Must Be Less Than 10 Characters")
@@ -41,6 +45,7 @@ eventHub.addEventListener("click", clickEvent => {
             concept: journalConcept.value,
             moodId: journalMood.value,
             instructorId: journalInstructor.value,
+            tagId: journalTags.value,
             date: Date.now()
         }
         saveJournalEntry(newNote)
@@ -81,6 +86,7 @@ export const JournalFormComponent  = () => {
             ).join("")
         }
         </select>
+        <input type="text" id="journal--tags" placeholder="Tags" />
         <button type="button" name="conceptsCovered" id="conceptsCovered">
         Record Journal Entry
     </button>`
